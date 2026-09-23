@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'python -m py_compile app.py'
+                bat 'python -m py_compile app.py'
             }
         }
 
@@ -26,7 +26,7 @@ pipeline {
                     ok: 'Release'
                 )
 
-                sh 'python app.py'
+                bat 'python app.py'
             }
         }
     }
